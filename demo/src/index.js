@@ -1,4 +1,5 @@
 import React from 'react';
+// eslint-disable-next-line
 import ReactDOM from 'react-dom';
 import './index.css';
 // import App from './App';
@@ -7,12 +8,12 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(<Application />, document.getElementById('root'));
 
-ReactDOM.render(
-  <React.StrictMode>
-    <Application />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+// ReactDOM.render(
+//   <React.StrictMode>
+//     <Application />
+//   </React.StrictMode>,
+//   document.getElementById('root')
+// );
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
