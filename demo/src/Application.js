@@ -51,6 +51,9 @@ class Application extends Component {
             <span><button onClick={(e) => this.handleClick()}>Click Me!</button></span>
         </div>
         );
+        //Includes a ternary statement, syntax is similar to cpp but needs to be enclosed if {} as its JS. 
+        //null indicates nothing is there to be done
+        //if the condition is true then the html tag comes in place and the web pages is re-rendered
     }
 
 
