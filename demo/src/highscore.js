@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
 
-class highscore extends Component
+class Highscore extends Component
 {
     render()
     {
         return(
-            <h1>This is highscore</h1>
+            <h3>This is highscore</h3>
         );
     }
 
 }
-export default highscore;
+export default Highscore;

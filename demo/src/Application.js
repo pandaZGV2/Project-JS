@@ -1,5 +1,6 @@
 // eslint-disable-next-line
 import React, { Component } from 'react';
+import Highscore from './highscore';
 // eslint-disable-next-line
 
 class Application extends Component {
@@ -48,6 +49,7 @@ class Application extends Component {
                 <h1>You have crossed 10</h1>
                 : null
             }
+            <Highscore />
             <span><button onClick={(e) => this.handleClick()}>Click Me!</button></span>
         </div>
         );
@@ -59,4 +61,4 @@ class Application extends Component {
 
 }
 
-export default Application
+export default Application;
