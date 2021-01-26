@@ -31,7 +31,8 @@ class Application extends Component {
 
     }
     componentDidUpdate(props, state) {
-        if (this.state.count > 10) {
+        if (this.state.count > 10 && this.state.count != state.count) {
+            console.log("Updating over 10");
             this.setState({ overTen: true });
         }
         //this.setState({count: this.state.count  + 1});//Doesnt work as it repeatedly triggers componentDidUpdate so you get Maximum Depth exceeded error.
@@ -41,7 +42,7 @@ class Application extends Component {
         let { count } = this.state;
         return (<div>
             <h1>You clicked the button {count} times.</h1>
-            {(this.state.overTen && this.state.count != state.count) ?
+            {(this.state.overTen) ?
                 <h1>You have crossed 10</h1>
                 : null
             }
