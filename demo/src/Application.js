@@ -31,7 +31,9 @@ class Application extends Component {
 
     }
     componentDidUpdate(props, state) {
-        if (this.state.count > 10 && this.state.count != state.count && !this.state.overTen) {
+        if (this.state.count > 10 && this.state.count != state.count && !this.state.overTen) {//Checks if state.count is over 10 then checks if the state.count is not equal to state.count then checks if overTen is set already
+            //If overTen is set to true then statements are ignored otherwise they will be rendered.
+            //Prevents errors due to Maximum Depth Reached
             console.log("Updating over 10");
             this.setState({ overTen: true });
         }
