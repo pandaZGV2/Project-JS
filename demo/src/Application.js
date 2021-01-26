@@ -3,32 +3,41 @@ import React, { Component } from 'react';
 // eslint-disable-next-line
 
 class Application extends Component {
-    constructor(props)
-    {
+    constructor(props) {
         super(props);// Instantiates Parent Class not everytime its re-rendered
+        this.state = {
+            count: 0
+        }
     };
-    componentWillMount(props, state)
-    {
+    // componentWillMount(props, state) {
+
+    // }
+    // componentDidMount(props, state) {
+    //     console.log("Mounted with", props, state);
+
+    // }
+    // componentWillReceiveProps(props) {
+
+    // }
+    // componentWillUpdate(props, state) {
+    //     if (this.props.name !== props.name) {
+    //         //Do something
+    //     }
+    // }
+    
+    handleClick = () => {
+        this.setState({ count: this.state.count + 1 });
 
     }
-    componentDidMount(props, state)
-    {
-        console.log("Mounted with", props, state);
-
-    }
-    componentWillReceiveProps(props)
-    {
-
-    }
-    componentWillUpdate(props, state)
-    {
-        
+    componentDidUpdate(props, state) {
+        this.setState({count: this.state.count  + 1});//Doesnt work as it repeatedly triggers componentDidUpdate so you get Maximum Depth exceeded error.
     }
     render() {
         let name = "Panda";
+        let { count } = this.state;
         return (<div>
-            <h1>Hello, {name}</h1>
-            <span>Hello there Mate</span>
+            <h1>You clicked the button {count} times.</h1>
+            <span><button onClick={(e) => this.handleClick()}>Click Me!</button></span>
         </div>
         );
     }
