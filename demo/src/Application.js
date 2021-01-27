@@ -44,11 +44,13 @@ class Application extends Component {
         let name = "Panda";
         let { count } = this.state;
         return (<div>
-            <h1>You clicked the button {count} times.</h1>
+            <h1 ClassName="">You clicked the button {count} times.</h1>
             {
-            (this.state.overTen) ? <h1>You have crossed 10</h1> : null
+                (this.state.overTen) ? <h1>You have crossed 10</h1> : null
             }
-            <Highscore />
+            <Highscore
+                overTen={this.state.overTen}//Wrap in curly braces to use JS property
+            />
             <span><button onClick={(e) => this.handleClick()}>Click Me!</button></span>
         </div>
         );
