@@ -6,9 +6,10 @@ class Highscore extends Component {
             return (
                 <div>
                     <h3>This is highscore</h3>
-                    <button onClick={(e) => this.props.onReset(e)}>Reset</button>
+                    <button onClick={this.props.onReset}>Reset</button>
                 </div>
             );
+            //Button takes onclick property by default. when the function that calls another funtion with the same input and output you can avoid passing the input. The button emits the event as a single parameter and passes it to the function onClick as a single parameter.
         }
         else {
             return null;
