@@ -1,6 +1,7 @@
 // eslint-disable-next-line
 import React, { Component } from 'react';
 import Highscore from './highscore';
+import "./css/style.css";
 // eslint-disable-next-line
 
 class Application extends Component {
