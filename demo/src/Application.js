@@ -31,6 +31,14 @@ class Application extends Component {
         this.setState({ count: this.state.count + 1 });
 
     }
+    resetCount = (e) => {
+        this.setState(
+            {
+                count: 0,
+                overTen: false
+            }
+        )
+    }
     componentDidUpdate(props, state) {
         if (this.state.count > 10 && this.state.count != state.count && !this.state.overTen) {//Checks if state.count is over 10 then checks if the state.count is not equal to state.count then checks if overTen is set already
             //If overTen is set to true then statements are ignored otherwise they will be rendered.
@@ -50,6 +58,7 @@ class Application extends Component {
             }
             <Highscore
                 overTen={this.state.overTen}//Wrap in curly braces to use JS property
+                onReset={(e) => this.resetCount(e)}
             />
             <span><button onClick={(e) => this.handleClick()}>Click Me!</button></span>
         </div>
