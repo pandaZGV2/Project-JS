@@ -20,6 +20,12 @@ class App extends Component {
   }
   addtoCurrent = (symbol) => {
     console.log(symbol)
+    if(["/","X","+","-"].indexOf(symbol)>-1)
+    {
+      let {previous} = this.state;
+      previous.concat(this.state.current + symbol);
+      this.state.previous({previous})//keyname vale is stored in this.state.previous
+    }
     this.setState({ current: this.state.current + symbol });
   }
 
