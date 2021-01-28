@@ -23,7 +23,7 @@ class App extends Component {
     if (["/", "X", "+", "-"].indexOf(symbol) > -1) {
       let { previous } = this.state;
       previous.push(this.state.current + symbol);
-      this.state.previous({ previous })//keyname value is stored in this.state.previous
+      this.setState({ previous })//keyname value is stored in this.state.previous
     }
     else {
       if (this.state.current === "0" && symbol !== ".") {
